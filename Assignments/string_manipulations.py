@@ -94,7 +94,21 @@ For example, the longest substring without repeating characters in "abcabcbb" is
 which has a length of 3.
 '''
 
-d
+def cal_substring(input_string):
+    maxLen = 1
+    substring= ''
+    for char in input_string:
+      if substring.count(char)==0:
+        substring = substring + char
+      else:
+         pass
+    print(f'The longest substring of the given text is: {substring}')
+
+
+input_string = input("Enter a string: ")
+cal_substring(input_string)
+
+
 
 
 

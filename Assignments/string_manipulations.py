@@ -21,6 +21,8 @@ String Anagrams: Write a function that checks if two strings are anagrams of eac
 An anagram is a word or phrase formed by rearranging the letters of a different word or phrase, 
 typically using all the original letters exactly once. 
 For example, "listen" and "silent" are anagrams.
+"eye", "yee"
+
 
 
 #Optional Try your best

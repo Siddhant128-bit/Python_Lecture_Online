@@ -37,4 +37,4 @@ print(f'Number of characters: {len(list(user_input))}')
 
 
 #total number of words in string: 
-print(f'Number of words: {len(user_input.split(" "))}')
+print(f'Number of words: {len(user_input.split(' '))}')

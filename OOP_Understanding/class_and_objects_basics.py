@@ -76,8 +76,32 @@ class Account:
         self.user_name=attribute_1_user_name
         self.relationship_status=attribute_2_relation_ship_status
         self.study_status=attribute_3_study_status
-        print(f'Username: {self.user_name}\nRelationship_status: {self.relationship_status}\nStudy Status: {self.study_status}')
-        print('--'*25)
-
+        
+    def relationship_update(self,parameter_1):
+        self.relationship_status=parameter_1
+        
 siddhant_object=Account('Siddhant Sharma','IDK','Bachelors')
 Prashant_Object=Account('Prashant Something','IDK','Masters')
+
+'''
+Siddhant Account before triggering relationship update
+'''
+print('While Starting the Account: ')
+print(f"Username: {siddhant_object.user_name},\nUser Relationship_Status: {siddhant_object.relationship_status},\nUser Study Status: {siddhant_object.study_status}")
+print('\n')
+print(f"Username: {Prashant_Object.user_name},\nUser Relationship_Status: {Prashant_Object.relationship_status},\nUser Study Status: {Prashant_Object.study_status}")
+print('\n')
+
+#Some event happened during lifetime
+siddhant_input=input('Enter your relationship_status new: ') #Any event in life
+siddhant_object.relationship_update(siddhant_input) #event in the object
+'''
+Siddhant_object changed attributes: 
+'''
+print('After changes in account: ')
+print(f"Username: {siddhant_object.user_name},\nUser Relationship_Status: {siddhant_object.relationship_status},\nUser Study Status: {siddhant_object.study_status}")
+print('\n')
+print(f"Username: {Prashant_Object.user_name},\nUser Relationship_Status: {Prashant_Object.relationship_status},\nUser Study Status: {Prashant_Object.study_status}")
+print('\n')
+
+

@@ -168,12 +168,12 @@ def addition_of_2_numbers(a,b):
   b=convert_to_integer(b)
   print(a+b)
 
-a1=input('Enter first number: ')
-#Understanding the scope of convert_to_integer()
-#a1=convert_to_integer(a1)
+# a1=input('Enter first number: ')
+# #Understanding the scope of convert_to_integer()
+# #a1=convert_to_integer(a1)
 
-a2=input('Enter second number: ')
-addition_of_2_numbers(a1,a2)
+# a2=input('Enter second number: ')
+# addition_of_2_numbers(a1,a2)
 
 
 '''
@@ -181,6 +181,156 @@ learn about lamda functions
 learn about args and kwargs,
 learn about default arguemnts setup
 '''
+'''
+Lamba function: inline function
+
+def function_name(arguments):
+  operations
+  return final_value
+
+functioN_name(parameter)
+
+In single line can we call define a function and also call it 
+'''
+#x_function=lambda x:x.replace(' ','-') #function_lambda(x): return x.replace(' ','-')
+#print(x_function('Siddhant Sharma'))
+
+
+#Write a lambda function to give a square of a particular number:
+''''
+square_it_function(any)-> int (int= (int(any))**2) (^,**)
+It should be lambda function
+'''
+# square_it=lambda x: (int(x))**2
+# x_input=int(input('Enter x: '))
+# x_squared=square_it(x_input)
+# print(x_squared)
+
+'''
+Advantage: 
+
+Effective reuse of variables, and function
+Can save multiple lines of code
+
+Disadvantage:
+
+difficult to use for very complex functions
+'''
+
+'''
+Task 1: Create a lambda function to take 2 argumments and return the sum of 2 arguments:
+sum_lambda(x(int),y(int)) -> int (operation = x+y)
+'''
+#Anyone trying to debug this please solve it 
+# sum_of_2_number = lambda x,y: int(x+y)
+# a= input("Enter a:")
+# b= input("Enter b:")
+# print(sum_of_2_number(int(a),int(b)))
+
+'''
+Task 2: Create a lambda function to take 1 argument and return 1 if its even, 0 if its odd
+check_even(x(int)) -> int/bool (opeartion = check if even)
+'''
+
+# check_even=lambda x: True if (x%2==0) else False
+# print(check_even(int(input('Enter any number: '))))
+
+'''
+check_even = lambda x: x % 2 == 0
+check_odd = lambda x: x % 2 != 0
+
+
+print(check_even(4))  
+print(check_odd(5))
+
+'''
+
+def check_even(x=10):
+  print(x)
+  if x%2==0:
+    return True
+  else: 
+    return False
+
+#x_input=int(input('Enter variable: '))
+#check_even(x_input)
+#check_even(15)
+
+'''
+Task: Create a function display_multiplication_table that takes an arugement and displays multiplication table of that arugment
+if nothing is passed that function should show the multiplication table of 5
+
+display_mul_table(10):
+
+10 x 1 = 10
+10 x 2 = 20
+10 x 3 = 30
+.
+.
+10 x 10 = 100
+'''
+
+def display_multiplication_table(argument_value=5,multiply_till=10):
+  for i in range(1,multiply_till+1):
+    print(f'{argument_value} x {i} = {argument_value*i}')
+
+#display_multiplication_table(8,5)
+
+'''
+Args: 
+send as many parameters as tuple so we want and our system should be able to handle it 
+
+kwargs: 
+send as many parameters as dictionary so we want and our system should be able to handle it 
+
+#for these usecases args and kwargs are best
+
+def random_function(a,b,c=3):
+  pass
+
+random_function(1,2,3,4,5,6,7,8,9,)
+
+'''
+
+'''
+Task 1: 
+let's have a function named counter
+counter(n number of input) -> total odds and total evens
+'''
+def counter(*x):
+  odd_counter=0
+  even_counter=0
+  for number in x: 
+    if number%2==0:
+      even_counter+=1
+    else:
+      odd_counter+=1
+  
+  return even_counter,odd_counter
+    
+
+#total_even_numbers,total_odd_numbers=counter(1,2,3,4,5)
+#print(f'total even numbers: {total_even_numbers}\ntotal odd numbers: {total_odd_numbers}')
 
 
 
+'''
+Task 2 let's have a function named adder
+adder(n number of input) -> total sum of all numbers
+'''
+
+def adder(*x):
+  total_sum=0
+  for number in x:
+    total_sum+=number
+
+  return total_sum
+
+print(adder())
+
+'''
+kwargs= key word arguments 
+try it out yourself 
+** x
+
+'''

@@ -1,0 +1,20 @@
+{
+  "Siddhant": {
+    "name": "Siddhant",
+    "password": "siddhant",
+    "DOB": "123",
+    "fav-color": "blue"
+  },
+  "Sarthak": {
+    "name": "Sarthak",
+    "password": "sarthak",
+    "DOB": "780",
+    "fav-color": "black"
+  },
+  "Sashank": {
+    "name": "Sashank",
+    "password": "sashank",
+    "DOB": "123123",
+    "fav-color": "bl"
+  }
+}
